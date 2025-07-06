@@ -32,7 +32,7 @@ const books = [
 export default function BooksPage() {
     return (
         <div className="w-full common-padding py-12 lg:py-30 ">
-            <div className="screen-width ">
+            <div className="screen-max-width ">
                 <div className="mb-4">
                 <span className="bg-yellow-200 text-yellow-800 text-sm px-3 py-1 rounded-full font-medium">
                   Authored Works

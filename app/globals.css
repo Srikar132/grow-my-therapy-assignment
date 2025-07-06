@@ -44,11 +44,7 @@ body {
 
 @layer utilities {
   .screen-max-width {
-    @apply max-w-[1660px] mx-auto container w-full flex items-center justify-center;
-  }
-
-  .screen-width {
-    @apply  w-full max-w-5xl mx-auto container;
+    @apply max-w-[1660px] mx-auto container w-full;
   }
 
   .common-padding {

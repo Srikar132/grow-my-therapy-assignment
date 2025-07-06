@@ -35,18 +35,18 @@ const Header = () => {
                       />
                   </Link>
 
-              <nav className="hidden lg:flex items-center space-x-3 sm:space-x-4 lg:space-x-6">
-                      {navLinks.map((link) => (
-                          <NavItems
-                              className="'text-[20px] font-bold text-[#024742] leading-tight'"
-                              key={link.name}
-                              name={link.name}
-                              href={link.href}
-                              dropdownItems={link.dropdownItems}
-                              isMobile = {false}
-                          />
-                      ))}
-                  </nav>
+                <nav className="hidden lg:flex items-center space-x-3 sm:space-x-4 lg:space-x-6">
+                        {navLinks.map((link) => (
+                            <NavItems
+                                className="'text-[20px] font-bold text-[#024742] leading-tight'"
+                                key={link.name}
+                                name={link.name}
+                                href={link.href}
+                                dropdownItems={link.dropdownItems}
+                                isMobile = {false}
+                            />
+                        ))}
+                    </nav>
 
                   {/* CTA Button */}
                   <div className="hidden lg:flex flex-shrink-0">

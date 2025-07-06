@@ -78,7 +78,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
 
   return (
     <div className="bg-[#B5DBDF] min-h-screen py-12 lg:py-20 common-padding">
-      <div className="max-w-5xl mx-auto items-center">
+      <div className="screen-max-width items-center">
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Left Column - Office Info */}
           <div className="space-y-8 mt-14">
