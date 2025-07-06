@@ -42,7 +42,7 @@ type AccordionItemProps = {
         </div>
       </div>
     )
-  }
+}
 
 
 export default function FAQPage() {
