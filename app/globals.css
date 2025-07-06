@@ -44,7 +44,7 @@ body {
 
 @layer utilities {
   .screen-max-width {
-    @apply max-w-6xl mx-auto container w-full flex items-center justify-center;
+    @apply max-w-[1660px] mx-auto container w-full flex items-center justify-center;
   }
 
   .screen-width {

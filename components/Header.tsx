@@ -24,7 +24,7 @@ const Header = () => {
       <>
           <header className="sticky top-0 backdrop-blur-3xl opacity-95 shadow-md bg-zinc-100/90 z-30  common-padding">
               <div className="flex items-center justify-between screen-max-width">
-                  <Link href={"/"} className="flex-shrink-0 flex items-center gap-2">
+                  <Link href={"/"} className="flex-shrink-0 flex items-center gap-4">
                       <Image
                           src="/logo.png"
                           alt="logo"
