@@ -11,7 +11,6 @@ const LatestBlogs = () => {
         <hr className="w-full h-px text-gray-200 my-5 screen-max-width"/>
         
         <ul className="my-5 p-5 py-20 flex items-center justify-center">
-            {/* No blogs for now  */}
             <p className="text-base">No blogs are posted till now.</p>
         </ul>
         </section>
