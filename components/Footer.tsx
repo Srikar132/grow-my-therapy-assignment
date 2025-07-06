@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <footer className="bg-[#305151] text-white pt-10 pb-5 text-sm">
       <div className="max-w-4xl mx-auto px-4 md:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-        {/* Column 1: Logo + Contact */}
         <div className="space-y-3">
           <Image src="/logo.png" alt="Ellie Logo" width={150} height={60} />
           <div className="text-xs space-y-1">
