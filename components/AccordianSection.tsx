@@ -20,7 +20,7 @@ type AccordionItemProps = {
     return (
       <div className="border-b border-gray-500">
         <button
-          className="w-full flex justify-between items-center py-6 text-left font-semibold text-gray-800 text-2xl cursor-pointer"
+          className="w-full flex justify-between items-center py-6 text-left font-semibold font-color text-2xl cursor-pointer"
           onClick={onToggle}
         >
           <span>{question}</span>
@@ -54,8 +54,8 @@ export default function FAQPage() {
   
     return (
       <section id="faq" className="bg-[#B5DBDF] text-cyan-900  py-20 common-padding">
-        <div className="screen-max-width">
-          <h2 className="text-5xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-6xl font-bold font-color mb-8">Frequently Asked Questions</h2>
   
           {drSerenaBlakeData.faqs.map((item, idx) => (
             <AccordionItem

@@ -22,8 +22,8 @@ const TestimonialSection = () => {
 
 return (
     <section id='testimonials' className="bg-[#B5DBDF] common-padding py-20">
-      <div className="screen-max-width">
-        <span className="bg-yellow-100 text-sm px-3 py-1 rounded-full font-medium text-gray-700">
+      <div className="max-w-5xl mx-auto">
+        <span className="bg-yellow-100 text-sm px-3 py-1 rounded-lg font-medium text-gray-700">
           Client Success Stories & Testimonials
         </span>
 
@@ -34,7 +34,6 @@ return (
           Real experiences from individuals who have found healing and growth through our work together.
         </p>
 
-        {/* Scrollable Card Section */}
         <div className="relative">
           {/* Left Gradient */}
           <div className="absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-[#c1e4e9] to-transparent z-10 pointer-events-none" />
@@ -42,8 +41,7 @@ return (
           {/* Right Gradient (optional) */}
           <div className="absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-[#c1e4e9] to-transparent z-10 pointer-events-none" />
 
-          {/* Scrollable Cards */}
-          <div className="flex overflow-x-auto animate-scroll scrollbar-hide -mx-4 px-4 mx-auto max-w-sm relative z-0">
+          <div className="flex overflow-x-auto animate-scroll scrollbar-hide px-4 mx-auto max-w-sm relative z-0">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard
                 key={index}

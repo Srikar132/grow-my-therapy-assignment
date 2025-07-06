@@ -5,7 +5,7 @@ import candleAnimation from "@/assets/candle.json"
 
 const CandleQuoteSection = () => {
   return (
-    <section className="bg-gray-50 common-padding py-30 text-center grid grid-cols-1 md:grid-cols-2 items-center justify-center screen-max-width">
+    <section className="bg-gray-50 common-padding py-30 text-center grid grid-cols-1 md:grid-cols-2 items-center justify-center screen-width">
       <div className="w-64 mb-6">
         <LottiePlayer
           animationData={candleAnimation}
