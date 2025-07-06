@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin "tailwind-scrollbar-hide";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,6 +12,9 @@
   --color-foreground: var(--foreground);
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 
 body {

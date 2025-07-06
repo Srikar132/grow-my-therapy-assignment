@@ -1,5 +1,6 @@
 "use client"
 
+import drSerenaBlakeData from "@/constants"
 import { ChevronDown } from "lucide-react"
 import { useState } from "react"
 
@@ -44,32 +45,6 @@ type AccordionItemProps = {
   }
 
 
-const faqData = [
-  {
-    question: "What are your fees?",
-    answer: "Our fees vary depending on the service. Contact us for more details.",
-  },
-  {
-    question: "Do you take insurance?",
-    answer: "Yes, we accept several insurance plans. Please call to confirm your provider.",
-  },
-  {
-    question: "Do you provide online counseling?",
-    answer: "Yes, we offer both in-person and secure online counseling sessions.",
-  },
-  {
-    question: "What are your office hours?",
-    answer: "We are open Monday through Friday from 9am to 6pm.",
-  },
-  {
-    question: "What geographic areas do you serve?",
-    answer: "We serve clients across the state and offer online support nationwide.",
-  },
-  {
-    question: "What services do you offer?",
-    answer: "We offer individual therapy, couples counseling, child play therapy, and more.",
-  },
-]
 export default function FAQPage() {
     const [openIndex, setOpenIndex] = useState<number | null>(null)
   
@@ -78,11 +53,11 @@ export default function FAQPage() {
     }
   
     return (
-      <section className="bg-cyan-100  py-20 common-padding">
+      <section id="faq" className="bg-cyan-100  py-20 common-padding">
         <div className="screen-max-width">
           <h2 className="text-5xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
   
-          {faqData.map((item, idx) => (
+          {drSerenaBlakeData.faqs.map((item, idx) => (
             <AccordionItem
               key={idx}
               question={item.question}

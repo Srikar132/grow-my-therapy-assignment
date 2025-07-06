@@ -4,7 +4,7 @@ import React from "react";
 const Featured = () => {
   return (
     <div className="w-full bg-[#B5DBDF] py-6 h-auto">
-      <div className="screen-max-width !w-fit flex-wrap  flex items-center justify-between gap-10 px-4">
+      <div className="screen-max-width !w-fit flex-wrap  flex items-center justify-center gap-5 lg:gap-10 px-4 ">
         
         {/* Text */}
         <div className="">

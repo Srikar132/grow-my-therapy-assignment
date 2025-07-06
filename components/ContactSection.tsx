@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import ContactForm from './ContactForm';
+import drSerenaBlakeData from '@/constants';
 
 
 
@@ -29,7 +30,6 @@ interface ContactSectionProps {
     practitionerName: string;
   };
   insuranceNote?: string;
-  recaptchaSiteKey: string;
 }
 
 // Extend Window interface for reCAPTCHA
@@ -47,20 +47,16 @@ declare global {
 
 const ContactSection: React.FC<ContactSectionProps> = ({
   office = {
-    address: "4913 Fitzhugh Avenue",
-    suite: "Suite 102",
-    city: "Richmond",
-    state: "VA",
-    zipCode: "23230",
-    fullLocation: "Richmond, VA"
+    address: "1287 Maplewood Drive",
+    suite: "", // No suite was mentioned, but leave it empty for future use
+    city: "Los Angeles",
+    state: "CA",
+    zipCode: "90026",
+    fullLocation: "Los Angeles, CA"
   },
-  hours = {
-    monday: "Monday: 12:00 PM - 8:00 PM",
-    tuesday: "Tuesday: 12:00 PM - 8:00 PM",
-    wednesday: "Wednesday: 9:00 AM - 6:00 PM"
-  },
+  hours = drSerenaBlakeData.officeHours as any,
   contact = {
-    phone: "(757) 474-5262"
+    phone: drSerenaBlakeData.contact.phone
   },
   formConfig = {
     title: "Get In Touch",
@@ -70,7 +66,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({
     practitionerName: "Ellie"
   },
   insuranceNote = "I do not take insurance directly. However, I can provide you with a billing sheet with the necessary facts and codes so you can file for out-of-network benefits with your insurance company.",
-  recaptchaSiteKey
 }) => {
   const handleFormSubmit = (formData: FormData) => {
     console.log('Form submitted with data:', formData);
@@ -111,9 +106,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({
             <div>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Hours</h2>
               <div className="text-gray-700 space-y-1">
-                <p>{hours.monday}</p>
-                <p>{hours.tuesday}</p>
-                <p>{hours.wednesday}</p>
+                <p>{hours.inPerson}</p>
+                <p>{hours.virtual}</p>
+                <p>{hours.method}</p>
               </div>
             </div>
 
@@ -135,7 +130,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({
           <div className='w-full max-w-sm place-self-center'>
             <ContactForm
                 formConfig={formConfig}
-                recaptchaSiteKey={recaptchaSiteKey}
             />
           </div>
         </div>
@@ -168,7 +162,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({
 };
 
 export default ContactSection;
-export { ContactForm };
 
 // Example usage:
 // <ContactSection recaptchaSiteKey="your-recaptcha-site-key-here" />

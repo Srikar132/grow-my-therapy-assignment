@@ -12,10 +12,10 @@ const CouncellingCard = () => {
             <Image
                 src={card.image}
                 alt={card.alt}
-                className="w-full rounded-md mb-3"
+                className="w-full rounded-md mb-3 h-64 object-cover"
                 height={50}
                 width={50}
-                priority
+               quality={100}
             />
 
             <h2 className="text-xl font-bold text-gray-800 mb-2">

@@ -15,7 +15,7 @@ const CandleQuoteSection = () => {
         />
       </div>
 
-      <blockquote className="text-2xl sm:text-3xl md:text-7xl font-bold text-teal-800 font-handwriting">
+      <blockquote className="text-2xl sm:text-3xl md:text-4xl font-bold text-teal-800 font-handwriting">
         “Come to me, all who labor and are heavy laden, and I will give you rest.”
         <br />
         <span className="text-base mt-2 block">– Matthew 11:28</span>

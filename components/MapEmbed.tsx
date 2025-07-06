@@ -4,7 +4,7 @@ type MapEmbedProps = {
   
   const MapEmbed: React.FC<MapEmbedProps> = ({ src }) => {
     return (
-      <div className="w-full h-[400px]">
+      <div className="w-full h-[300px]">
         <iframe
           src={src}
           width="100%"

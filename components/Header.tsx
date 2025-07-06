@@ -6,6 +6,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import NavItems from './NavItems'
 import Sidebar from './Sidebar'
+import Link from 'next/link'
 
 const Header = () => {
 
@@ -24,7 +25,7 @@ const Header = () => {
           <header className="sticky top-0 backdrop-blur-3xl opacity-95 shadow-md bg-zinc-100/90 z-30  common-padding">
               <div className="flex items-center justify-between screen-max-width">
                   {/* Logo */}
-                  <div className="flex-shrink-0 flex items-center gap-2">
+                  <Link href={"/"} className="flex-shrink-0 flex items-center gap-2">
                       <Image
                           src="/logo.png"
                           alt="logo"
@@ -33,7 +34,7 @@ const Header = () => {
                           className="object-contain cursor-pointer sm:h-15 sm:w-40 md:h-30  md:w-60 md:scale-120"
                           priority
                       />
-                  </div>
+                  </Link>
 
                   {/* Navigation */}
                   <nav className="hidden lg:flex items-center space-x-4 sm:space-x-6 lg:space-x-8">

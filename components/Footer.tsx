@@ -16,13 +16,7 @@ const Footer = () => {
             <p>4913 Fitzhugh Avenue, Suite 102, Richmond, VA 23230</p>
             <p className="mt-1">📞 (757) 474-5262</p>
           </div>
-          <Image
-            src="/verified-by-psychology-today.png"
-            alt="Verified"
-            width={130}
-            height={30}
-            className="mt-2"
-          />
+          Verified
         </div>
 
         {/* Column 2: Links */}

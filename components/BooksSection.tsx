@@ -37,7 +37,7 @@ export default function BooksPage() {
                 <span className="bg-yellow-200 text-yellow-800 text-sm px-3 py-1 rounded-full font-medium">
                   Authored Works
                 </span>
-                    <h2 className="text-5xl font-bold text-gray-900 mt-3">Ellie&apos;s Books</h2>
+                    <h2 className="text-5xl font-bold text-gray-900 mt-3">Dr. Sarena Blake&apos;s Books</h2>
                 </div>
 
                 <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8">
