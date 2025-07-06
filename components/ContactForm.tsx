@@ -29,7 +29,7 @@ const ContactForm: React.FC<ContactFormProps & { recaptchaSiteKey?: string }> = 
     tosUrl: "#",
     practitionerName: "Ellie",
   },
-  recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+  recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY||"maheswari"
 }) => {
   const { capchaToken, recaptchaRef, handleRecaptcha } = useRecaptcha();
 
@@ -97,13 +97,15 @@ const ContactForm: React.FC<ContactFormProps & { recaptchaSiteKey?: string }> = 
   };
 
   return (
-    <div id='contact' className="bg-white rounded-lg p-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">{formConfig.title}</h2>
-      <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+    <div id='contact' className="bg-white w-[400px] border border-teal-900 rounded-lg p-6">
+      <h2 className="text-2xl font-bold text-center text-teal-950 mb-1">{formConfig.title}</h2>
+      <p className="font-color text-sm mb-5 leading-sung">
         {formConfig.description}
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
+        <div className='space-y-2'>
+          <p className='contact-form'>Name</p>
         {/* Name */}
         <input
           type="text"
@@ -112,9 +114,12 @@ const ContactForm: React.FC<ContactFormProps & { recaptchaSiteKey?: string }> = 
           value={formData.name}
           onChange={handleInputChange}
           required
-          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
+          className="w-full px-3 py-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
         />
+        </div>
 
+        <div className='space-y-2'>
+          <p className='contact-form'>Email</p>
         {/* Email */}
         <input
           type="email"
@@ -123,9 +128,11 @@ const ContactForm: React.FC<ContactFormProps & { recaptchaSiteKey?: string }> = 
           value={formData.email}
           onChange={handleInputChange}
           required
-          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
+          className="w-full px-3 py-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
         />
-
+        </div>
+        <div className='space-y-2'>
+          <p className='contact-form'>Phone</p>
         {/* Phone */}
         <input
           type="tel"
@@ -133,22 +140,26 @@ const ContactForm: React.FC<ContactFormProps & { recaptchaSiteKey?: string }> = 
           placeholder="(555) 123-4567"
           value={formData.phone}
           onChange={handleInputChange}
-          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
+          className="w-full px-3 py-1 text-sm border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
         />
+        </div>
 
         {/* Message */}
-        <textarea
+        <div className='space-y-2'>
+          <p className='contact-form'>Message</p>
+          <textarea
           name="message"
           placeholder="How can I help you?"
           value={formData.message}
           onChange={handleInputChange}
           rows={1}
           required
-          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
+          className="w-full px-3 text-sm py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
         />
 
+        </div>
         {/* reCAPTCHA */}
-        <div className="flex justify-center">
+        <div className="flex items-start">
           <ReCAPTCHA
             ref={recaptchaRef}
             sitekey={recaptchaSiteKey!}
@@ -160,7 +171,7 @@ const ContactForm: React.FC<ContactFormProps & { recaptchaSiteKey?: string }> = 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-teal-900 text-white py-2 px-4 rounded-md hover:bg-teal-800 disabled:bg-gray-400"
+          className="w-full bg-teal-900 text-white py-1 px-4 rounded-md hover:bg-teal-800 disabled:bg-gray-400"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>

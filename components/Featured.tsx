@@ -8,7 +8,7 @@ const Featured = () => {
         
         {/* Text */}
         <div className="">
-          <p className="font-bold text-2xl lg:text-4xl font-bold text-[#1E4145]">Featured In</p>
+          <p className=" text-2xl lg:text-4xl font-bold text-[#1E4145]">Featured In</p>
         </div>
 
         {["/featured1.jpg" , "/featured2.png" , "/featured3.png" , "/featured4.svg"].map((image, index) => (

@@ -2,6 +2,7 @@
 import React from 'react';
 import ContactForm from './ContactForm';
 import drSerenaBlakeData from '@/constants';
+import { Phone } from 'lucide-react';
 
 
 
@@ -76,15 +77,14 @@ const ContactSection: React.FC<ContactSectionProps> = ({
   };
 
   return (
-    <div className="bg-[#B5DBDF] text-cyan-900 min-h-screen py-12 lg:py-20 common-padding">
-      <div className="screen-max-width">
+    <div className="bg-[#B5DBDF] min-h-screen py-12 lg:py-20 common-padding">
+      <div className="max-w-5xl mx-auto items-center">
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Left Column - Office Info */}
-          <div className="space-y-8">
-            {/* Office Section */}
+          <div className="space-y-8 mt-14">
             <div>
-              <h2 className="text-5xl font-bold  mb-4">Our Office</h2>
-              <div className="space-y-1 text-2xl">
+              <h2 className="text-4xl font-semibold font-color mb-2">Our Office</h2>
+              <div className="font-color text-lg">
                 <p>{office.address}</p>
                 <p>{office.suite}</p>
                 <p>{office.city}</p>
@@ -92,30 +92,28 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 <p>{office.fullLocation}</p>
                 <button
                   onClick={handleGoogleMapsClick}
-                  className="mt-3 bg-gray-600 text-white px-4 py-2 rounded text-sm hover:bg-gray-700 transition-colors"
+                  className="mt-3 bg-color text-white px-4 py-2 rounded text-sm"
                 >
                   Google Maps
                 </button>
               </div>
             </div>
 
-            {/* Hours Section */}
             <div>
-              <h2 className="text-5xl font-bold text-gray-800 mb-4">Hours</h2>
-              <div className="text-2xl space-y-1">
+              <h2 className="text-4xl font-semibold font-color mb-2">Hours</h2>
+              <div className="text-lg font-color leading-tight">
                 <p>{hours.inPerson}</p>
                 <p>{hours.virtual}</p>
                 <p>{hours.method}</p>
               </div>
             </div>
 
-            {/* Contact Section */}
             <div>
-              <h2 className="text-5xl font-bold text-gray-800 mb-4">Contact</h2>
-              <div className="text-2xl">
+              <h2 className="text-4xl font-semibold font-color mb-2">Contact</h2>
+              <div className="text-lg">
                 <p className="flex items-center">
-                  <span className="mr-2">📞</span>
-                  <a href={`tel:${contact.phone}`} className="hover:text-blue-600 transition-colors">
+                  <span className="mr-2"><Phone className='font-color'/></span>
+                  <a href={`tel:${contact.phone}`} className="font-color">
                     {contact.phone}
                   </a>
                 </p>
@@ -123,7 +121,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({
             </div>
           </div>
 
-          {/* Right Column - Contact Form */}
           <div className='w-full max-w-sm place-self-center'>
             <ContactForm
                 formConfig={formConfig}
@@ -131,20 +128,19 @@ const ContactSection: React.FC<ContactSectionProps> = ({
           </div>
         </div>
 
-        {/* Insurance Note */}
         {insuranceNote && (
-          <div className="mt-8 bg-red-50 border border-red-200 rounded-lg p-4">
-            <div className="flex items-start">
+          <div className="mt-8 max-w-6xl mx-auto bg-white border border-teal-900 rounded-lg p-4">
+            <div className="flex items-start flex-col">
               <div className="flex-shrink-0">
-                <span className="text-red-600 font-bold">⚠️ Please Note:</span>
+                <span className="text-red-700 font-bold">⚠️ Please Note:</span>
               </div>
               <div className="ml-3">
-                <p className="text-sm text-red-800">
+                <p className="text-lg text-blue-800">
                   {insuranceNote.split('out-of-network benefits').map((part, index) => (
                     <span key={index}>
                       {part}
                       {index === 0 && (
-                        <span className="text-blue-600 font-semibold">out-of-network benefits</span>
+                        <span className="text-blue-900 font-semibold">out-of-network benefits</span>
                       )}
                     </span>
                   ))}
@@ -159,6 +155,3 @@ const ContactSection: React.FC<ContactSectionProps> = ({
 };
 
 export default ContactSection;
-
-// Example usage:
-// <ContactSection recaptchaSiteKey="your-recaptcha-site-key-here" />

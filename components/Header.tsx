@@ -24,7 +24,6 @@ const Header = () => {
       <>
           <header className="sticky top-0 backdrop-blur-3xl opacity-95 shadow-md bg-zinc-100/90 z-30  common-padding">
               <div className="flex items-center justify-between screen-max-width">
-                  {/* Logo */}
                   <Link href={"/"} className="flex-shrink-0 flex items-center gap-2">
                       <Image
                           src="/logo.png"
@@ -36,8 +35,7 @@ const Header = () => {
                       />
                   </Link>
 
-                  {/* Navigation */}
-                  <nav className="hidden lg:flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
+              <nav className="hidden lg:flex items-center space-x-3 sm:space-x-4 lg:space-x-6">
                       {navLinks.map((link) => (
                           <NavItems
                               className="'text-[20px] font-bold text-[#024742] leading-tight'"
@@ -53,11 +51,11 @@ const Header = () => {
                   {/* CTA Button */}
                   <div className="hidden lg:flex flex-shrink-0">
                       <button
-                          className="flex items-center text-black gap-2 border border-black rounded-lg bg-white px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-2 hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                          className="flex items-center text-black gap-2 border border-black rounded-lg bg-white px-3 py-2 sm:px-3 sm:py-2 lg:px-4 lg:py-2 hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
                           aria-label="Get started"
                       >
                           <Sparkles className="w-4 h-4 lg:w-5 lg:h-5" />
-                          <span className="text-xl cursor-pointer">Get started</span>
+                          <span className="text-lg cursor-pointer">Get started</span>
                       </button>
                   </div>
 

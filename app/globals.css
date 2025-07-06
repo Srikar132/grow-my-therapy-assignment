@@ -44,10 +44,26 @@ body {
 
 @layer utilities {
   .screen-max-width {
-    @apply max-w-[1660px] mx-auto container w-full;
+    @apply max-w-6xl mx-auto container w-full flex items-center justify-center;
+  }
+
+  .screen-width {
+    @apply  w-full max-w-5xl mx-auto container;
   }
 
   .common-padding {
     @apply px-3 sm:px-6 md:px-7 lg:px-10 ;
+  }
+
+  .font-color {
+    @apply text-[#1E4145]
+  }
+
+  .bg-color {
+    @apply bg-[#1e4145]
+  }
+
+  .contact-form {
+    @apply text-[#1E4145] text-start text-sm
   }
 }

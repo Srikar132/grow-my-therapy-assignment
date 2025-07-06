@@ -33,6 +33,7 @@ const Hero: React.FC = () => {
               Begin your journey today towards spiritual growth, deeper
               relationships, and lasting inner peace.
             </p>
+            <p className="text-white font-bold text-lg font-serif">I want to work with for you..</p>
 
             <AnimatedSentences/>
 

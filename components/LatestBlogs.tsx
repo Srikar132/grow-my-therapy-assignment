@@ -3,7 +3,7 @@ const LatestBlogs = () => {
 
     return (
         <section className="bg-zinc-100 text-cyan-900 common-padding py-12 lg:py-30">
-        <div className="screen-max-width">
+        <div className="screen-width">
             <h1 className="text-5xl font-bold mb-5">Latest Blogs</h1>
             <p className="max-w-lg text-base">Discover helpful insights and strategies from Ellie Shumaker to improve your relationships and personal well-being.</p>
         </div>

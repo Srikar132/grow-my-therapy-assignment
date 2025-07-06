@@ -31,7 +31,7 @@ const About = () => {
           </h1>
 
           {drSerenaBlakeData.about.map((about , i) => (
-            <p key={i} className="text-2xl font-bold tracking-wide font-medium leading-relaxed text-[#1E4145] text-center lg:text-left">
+            <p key={i} className="text-2xl tracking-wide font-medium leading-relaxed text-[#1E4145] text-center lg:text-left">
               {about}
             </p>
           ))}
