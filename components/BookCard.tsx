@@ -65,7 +65,7 @@ const BookCard: React.FC<BookCardProps> = ({
                         rel="noopener noreferrer"
                         className={`w-full block text-center py-2 px-4 rounded-md font-medium transition ${
                             available
-                                ? "bg-teal-100 text-teal-800 hover:bg-teal-200"
+                                ? "bg-[#B5DBDF] text-cyan-900 "
                                 : "bg-gray-100 text-gray-500 cursor-not-allowed"
                         }`}
                     >

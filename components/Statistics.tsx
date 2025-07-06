@@ -22,8 +22,8 @@ const Statistics: React.FC = () => {
   const [ref, inView] = useInView({ triggerOnce: false });
 
   return (
-    <div className="bg-[#305151] py-12 lg:py-20">
-      <div className="screen-max-width px-4">
+    <div className="bg-[#305151] py-12 lg:py-20 common-padding">
+      <div className="screen-max-width ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14">
           {stats.map((stat, index) => (
             <div key={index} ref={ref} className="text-center lg:text-left">

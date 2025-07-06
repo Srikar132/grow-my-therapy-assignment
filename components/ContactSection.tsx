@@ -67,10 +67,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
   },
   insuranceNote = "I do not take insurance directly. However, I can provide you with a billing sheet with the necessary facts and codes so you can file for out-of-network benefits with your insurance company.",
 }) => {
-  const handleFormSubmit = (formData: FormData) => {
-    console.log('Form submitted with data:', formData);
-    // Handle form submission logic here
-  };
+
 
   const handleGoogleMapsClick = () => {
     const address = `${office.address}, ${office.city}, ${office.state} ${office.zipCode}`;
@@ -79,21 +76,21 @@ const ContactSection: React.FC<ContactSectionProps> = ({
   };
 
   return (
-    <div className="bg-cyan-100 min-h-screen py-12 lg:py-20 common-padding">
+    <div className="bg-[#B5DBDF] text-cyan-900 min-h-screen py-12 lg:py-20 common-padding">
       <div className="screen-max-width">
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Left Column - Office Info */}
           <div className="space-y-8">
             {/* Office Section */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Office</h2>
-              <div className="text-gray-700 space-y-1">
+              <h2 className="text-5xl font-bold  mb-4">Our Office</h2>
+              <div className="space-y-1 text-2xl">
                 <p>{office.address}</p>
                 <p>{office.suite}</p>
                 <p>{office.city}</p>
                 <p>{office.state} {office.zipCode}</p>
                 <p>{office.fullLocation}</p>
-                <button 
+                <button
                   onClick={handleGoogleMapsClick}
                   className="mt-3 bg-gray-600 text-white px-4 py-2 rounded text-sm hover:bg-gray-700 transition-colors"
                 >
@@ -104,8 +101,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({
 
             {/* Hours Section */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Hours</h2>
-              <div className="text-gray-700 space-y-1">
+              <h2 className="text-5xl font-bold text-gray-800 mb-4">Hours</h2>
+              <div className="text-2xl space-y-1">
                 <p>{hours.inPerson}</p>
                 <p>{hours.virtual}</p>
                 <p>{hours.method}</p>
@@ -114,8 +111,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({
 
             {/* Contact Section */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Contact</h2>
-              <div className="text-gray-700">
+              <h2 className="text-5xl font-bold text-gray-800 mb-4">Contact</h2>
+              <div className="text-2xl">
                 <p className="flex items-center">
                   <span className="mr-2">📞</span>
                   <a href={`tel:${contact.phone}`} className="hover:text-blue-600 transition-colors">

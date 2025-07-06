@@ -97,7 +97,7 @@ const ContactForm: React.FC<ContactFormProps & { recaptchaSiteKey?: string }> = 
   };
 
   return (
-    <div id='contact' className="bg-pink-50 rounded-lg p-6">
+    <div id='contact' className="bg-white rounded-lg p-6">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">{formConfig.title}</h2>
       <p className="text-gray-600 text-sm mb-6 leading-relaxed">
         {formConfig.description}
@@ -112,7 +112,7 @@ const ContactForm: React.FC<ContactFormProps & { recaptchaSiteKey?: string }> = 
           value={formData.name}
           onChange={handleInputChange}
           required
-          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
         />
 
         {/* Email */}
@@ -123,7 +123,7 @@ const ContactForm: React.FC<ContactFormProps & { recaptchaSiteKey?: string }> = 
           value={formData.email}
           onChange={handleInputChange}
           required
-          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
         />
 
         {/* Phone */}
@@ -133,7 +133,7 @@ const ContactForm: React.FC<ContactFormProps & { recaptchaSiteKey?: string }> = 
           placeholder="(555) 123-4567"
           value={formData.phone}
           onChange={handleInputChange}
-          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
         />
 
         {/* Message */}
@@ -142,9 +142,9 @@ const ContactForm: React.FC<ContactFormProps & { recaptchaSiteKey?: string }> = 
           placeholder="How can I help you?"
           value={formData.message}
           onChange={handleInputChange}
-          rows={4}
+          rows={1}
           required
-          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-900"
         />
 
         {/* reCAPTCHA */}

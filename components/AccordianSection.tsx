@@ -53,7 +53,7 @@ export default function FAQPage() {
     }
   
     return (
-      <section id="faq" className="bg-cyan-100  py-20 common-padding">
+      <section id="faq" className="bg-[#B5DBDF] text-cyan-900  py-20 common-padding">
         <div className="screen-max-width">
           <h2 className="text-5xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
   

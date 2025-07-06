@@ -3,7 +3,7 @@ import React from 'react';
 
 const Consultation = () => {
   return (
-    <div className='bg-[#1E4145] w-full h-auto py-20 flex items-center justify-center'>
+    <div className='bg-[#1E4145] w-full h-auto py-20 flex items-center justify-center common-padding'>
       <div className='flex flex-col lg:flex-row items-center justify-between gap-8  screen-max-width '>
         
         <div className='w-full lg:w-[200px] text-center lg:text-left'>
